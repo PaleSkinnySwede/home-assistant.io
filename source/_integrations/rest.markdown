@@ -401,11 +401,11 @@ sensor:
       - "time0"
   - platform: template
     sensors:
-       steam_temp:
+      steam_temp:
         friendly_name: Steam Temp
         value_template: '{{ states.sensor.steam_system_data.attributes["temp0"] | regex_findall_index("([0-9]+)XF") }}'
         unit_of_measurement: "°F"
-       steam_time_remaining:
+      steam_time_remaining:
         friendly_name: "Steam Time Remaining"
         value_template: '{{ states.sensor.steam_system_data.attributes["time0"] }}'
         unit_of_measurement: "minutes"
